@@ -5,5 +5,12 @@
 // https://www.mathsisfun.com/numbers/fibonacci-sequence.html#:~:text=The%20Fibonacci%20Sequence%20is%20the,21%2C%2034%2C%20...
 
 const fibonacciRecursive = function(n) {
-
+    if(n === 0){
+        return 0;
+    } else if(n === 1){
+        return 1;
+    }
+    return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
 }
+
+console.log(fibonacciRecursive(6));
